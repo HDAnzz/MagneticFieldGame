@@ -1,4 +1,4 @@
-﻿package {
+package {
 	import items.*;
 	import flash.display.MovieClip;
 	import flash.events.Event;
@@ -19,11 +19,7 @@
 			scoreShower.x=460;scoreShower.y=0;
 			scoreShower.defaultTextFormat=new TextFormat("Microsoft YaHei UI",15);
 			scoreShower.text="score:"+score.toString();
-			versionShower.y=365;
-			versionShower.defaultTextFormat=new TextFormat("Microsoft YaHei UI",10,0x808080);
-			versionShower.width=500;
-			versionShower.text="v 0.3.0 版权归HDAnzz所有 qq:2606070584";
-			this.addChild(scoreShower);this.addChild(versionShower);
+			this.addChild(scoreShower);
 			this.addChild(p);this.addChild(p.aS);
 			this.stage.addEventListener(KeyboardEvent.KEY_DOWN,p.changeMove);
 			this.addEventListener(Event.ENTER_FRAME,reflesh);
@@ -44,7 +40,6 @@
 		var m:Array=new Array(m1,m2,m3);
 		var p:PContainer=new PContainer();
 		var scoreShower:TextField=new TextField();
-		var versionShower:TextField=new TextField();
 		var text1:TextField=new TextField();
 		var replay:ReplayButton=new ReplayButton();
 		function reflesh(evt:Event):void{
